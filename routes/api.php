@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 /* ------------------- PLUBLIC API ROUTES ------------------- */
 
-Route::get('/posts',  '\Api\Controller\PostController@index')->name('api.post.index');
-Route::post('/posts', '\Api\Controller\PostController@create')->name('api.post.create');
+Route::get('/posts',  'App\Http\Controllers\Api\PostController@index')->name('api.post.index');
+Route::post('/posts', 'App\Http\Controllers\Api\PostController@create')->name('api.post.create');
 
 /* ------------------- END PUBLIC API ROUTES ------------------- */
 
