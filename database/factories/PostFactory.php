@@ -14,7 +14,7 @@ class PostFactory extends Factory
     public function definition()
     {
         $posts = get_posts_api();
-        $rand = rand(0, 100); 
+        $rand  = rand(0, 100); 
          
         return [
             'title' => $posts[$rand]->title,
