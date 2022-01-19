@@ -26,7 +26,7 @@
                     <p> {{ substr($post->body, 0, 50) }}...</p>
                 </th>
                 <th>
-                    <a href="{{ route('web.posts.view', $post->id) }}" type="button" class="btn btn-primary">Show</button>
+                    <a href="{{ route('web.posts.view', $post->id) }}" type="button" class="btn btn-primary">Show</a>
                 </th>
             </tr>
         @endforeach
