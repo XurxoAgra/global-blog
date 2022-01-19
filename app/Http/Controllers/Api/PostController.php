@@ -17,4 +17,15 @@ class PostController extends Controller
     {
         return Post::all();
     }
+
+    /**
+     * Create new post
+     * @param Request $request
+     * @return response
+     */
+    public function store(Request $request) 
+    {
+        Post::create($request->all());
+        return response('The post has been created', 201);
+    }
 }
