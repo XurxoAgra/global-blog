@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix'=>'web'], function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    
+    Route::get('/posts', 'App\Http\Controllers\Web\PostController@index')->name('web.posts.index');
+    Route::get('/posts/{id}', 'App\Http\Controllers\Web\PostController@index')->name('web.posts.view');
 });
