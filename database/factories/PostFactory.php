@@ -26,12 +26,10 @@ class PostFactory extends Factory
 
     public function definition()
     {
-        $posts = get_posts_api();
-        $rand  = rand(0, 100); 
-         
         return [
             'title' => $this->faker->country(),
-            'body' => $this->faker->paragraph(),
+            'body'  => $this->faker->text(5000) ,
+            'image' => $this->faker->imageUrl(),
         ];
     }
 }
