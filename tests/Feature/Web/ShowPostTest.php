@@ -20,7 +20,7 @@ class ShowPostTest extends TestCase
     {
         $post = Post::factory()->create();
 
-        $response = $this->get(route('web.posts.view', $post->id))
+        $response = $this->get(route('web.posts.read', $post->id))
         ->assertViewIs('post.show')
         ->assertSeeText($post->title)
         ->assertSeeText($post->body)

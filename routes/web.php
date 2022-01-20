@@ -24,5 +24,5 @@ Route::get('/', function () {
 */
 Route::group(['prefix'=>'web'], function(){
     Route::get('/posts', 'App\Http\Controllers\Web\PostController@index')->name('web.posts.index');
-    Route::get('/posts/{id}', 'App\Http\Controllers\Web\PostController@show')->name('web.posts.view');
+    Route::get('/posts/{id}', 'App\Http\Controllers\Web\PostController@show')->name('web.posts.read');
 });

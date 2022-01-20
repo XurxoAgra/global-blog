@@ -25,10 +25,5 @@ class IndexPostTest extends TestCase
             ->assertSeeText('Recent Posts')
             ->assertSeeText('Show the recent posts')
             ->assertStatus(200);
-
-        $posts->each(function ($post) use ($response) {
-            $response->assertSee($post->id);
-            $response->assertSee($post->tittle);
-        });
     }
 }
