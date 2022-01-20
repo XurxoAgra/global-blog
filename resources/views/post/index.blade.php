@@ -17,13 +17,13 @@
         @foreach ($posts as $post)
             <tr>
                 <th>
-                    <p>  {{ $post->id}}</p>
+                    <p>{{ $post->id}}</p>
                 </th>
                 <th>
-                    <p> {{ $post->title }}</p>
+                    <p>{{ $post->title }}</p>
                 </th>
                 <th>
-                    <p> {{ substr($post->body, 0, 50) }}...</p>
+                    <p>{{ substr($post->body, 0, 50) }}...</p>
                 </th>
                 <th>
                     <a href="{{ route('web.posts.view', $post->id) }}" type="button" class="btn btn-primary">Show</a>
@@ -31,5 +31,5 @@
             </tr>
         @endforeach
     </tbody>
-  </table>
+</table>
 @endsection

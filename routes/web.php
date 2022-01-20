@@ -13,11 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return Redirect::route('web.posts.index');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Web Public Routes Group
+|--------------------------------------------------------------------------
+*/
 Route::group(['prefix'=>'web'], function(){
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    
     Route::get('/posts', 'App\Http\Controllers\Web\PostController@index')->name('web.posts.index');
     Route::get('/posts/{id}', 'App\Http\Controllers\Web\PostController@show')->name('web.posts.view');
 });
