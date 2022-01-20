@@ -11,7 +11,9 @@ class PostFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+
+    /* This would be the way to create data with the posts API */
+    /*public function definition()
     {
         $posts = get_posts_api();
         $rand  = rand(0, 100); 
@@ -19,6 +21,17 @@ class PostFactory extends Factory
         return [
             'title' => $posts[$rand]->title,
             'body' => $posts[$rand]->body,
+        ];
+    }*/
+
+    public function definition()
+    {
+        $posts = get_posts_api();
+        $rand  = rand(0, 100); 
+         
+        return [
+            'title' => $this->faker->country(),
+            'body' => $this->faker->paragraph(),
         ];
     }
 }
