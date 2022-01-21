@@ -14,14 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* ------------------- PLUBLIC API ROUTES ------------------- */
+/*
+|--------------------------------------------------------------------------
+| PLUBLIC API ROUTES
+|--------------------------------------------------------------------------
+*/
 
 Route::get('/posts',  'App\Http\Controllers\Api\PostController@index')->name('api.post.index');
 Route::post('/posts', 'App\Http\Controllers\Api\PostController@store')->name('api.post.store');
 
-/* ------------------- END PUBLIC API ROUTES ------------------- */
-
-
+/*
+|--------------------------------------------------------------------------
+| PRIVATE API ROUTES
+|--------------------------------------------------------------------------
+*/
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
